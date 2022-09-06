@@ -1,7 +1,8 @@
-@HC
+
 Feature: Get Users And Add Posts
 
-  Scenario: Get Specific User and Add A Post To The Wall
+  @HC
+  Scenario: Get Specific User and Add A Post To The Wall of the user
     Given  Create Multiple QueryParams For Get Request
       | queryParamKey | queryParamValue |
     When   Get Users

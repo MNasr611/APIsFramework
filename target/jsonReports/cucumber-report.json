@@ -1,0 +1,286 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2022-08-26T18:09:35.679Z",
+        "before": [
+          {
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefs.UsersAndPostStepDef.beforeScenario()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Get Specific User and Add A Post To The Wall",
+        "description": "",
+        "id": "get-users-and-add-posts;get-specific-user-and-add-a-post-to-the-wall",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefs.UsersAndPostStepDef.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 8000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Create Multiple QueryParams For Get Request",
+            "match": {
+              "location": "StepDefs.UsersAndPostStepDef.createQueryParamsForGetRequest(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "queryParamKey",
+                  "queryParamValue"
+                ]
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6041000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Get Users",
+            "match": {
+              "location": "StepDefs.UsersAndPostStepDef.getUsers()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Create QueryParam \"userId\" For Get Request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"userId\"",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.UsersAndPostStepDef.creategetpayloadAnd(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 675000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Get Posts For The User",
+            "match": {
+              "location": "StepDefs.UsersAndPostStepDef.validateThatTheIsIntegerBetweenAnd()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Validate That The PostId Is Integer Between 1 and 100",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 44
+                },
+                {
+                  "val": "100",
+                  "offset": 50
+                }
+              ],
+              "location": "StepDefs.UsersAndPostStepDef.validateThatTheIdIsIntegerBetweenAnd(int,int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Create Payload For Post Request",
+            "match": {
+              "location": "StepDefs.UsersAndPostStepDef.createPayloadForPostRequest(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "payLoadKey",
+                  "payLoadValue"
+                ]
+              },
+              {
+                "cells": [
+                  "title",
+                  "APIs Automation"
+                ]
+              },
+              {
+                "cells": [
+                  "body",
+                  "Automation Is Life"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 984000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Add New Post \"POSTS\" with method type \"POST\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"POSTS\"",
+                  "offset": 13
+                },
+                {
+                  "val": "\"POST\"",
+                  "offset": 38
+                }
+              ],
+              "location": "StepDefs.UsersAndPostStepDef.addNewPostWithMethodType(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 708000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Validate that post \"title\" is added with title \"APIs Automation\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"title\"",
+                  "offset": 19
+                },
+                {
+                  "val": "\"APIs Automation\"",
+                  "offset": 47
+                }
+              ],
+              "location": "StepDefs.UsersAndPostStepDef.validateThatPostIsAddedWithTitle(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@HC"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-08-26T18:09:44.265Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefs.UsersAndPostStepDef.beforeScenario()"
+            }
+          }
+        ],
+        "line": 20,
+        "name": "Get Specific User and Add A Post To The Wall",
+        "description": "",
+        "id": "get-users-and-add-posts;get-specific-user-and-add-a-post-to-the-wall",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefs.UsersAndPostStepDef.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "Create Multiple QueryParams For Get Request",
+            "match": {
+              "location": "StepDefs.UsersAndPostStepDef.createQueryParamsForGetRequest(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "queryParamKey",
+                  "queryParamValue"
+                ]
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 631000000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "Get Users",
+            "match": {
+              "location": "StepDefs.UsersAndPostStepDef.getUsers()"
+            },
+            "keyword": "When "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@HC"
+          }
+        ]
+      }
+    ],
+    "name": "Get Users And Add Posts",
+    "description": "",
+    "id": "get-users-and-add-posts",
+    "keyword": "Feature",
+    "uri": "classpath:feature_files//healthcheck/UsersAndPosts.feature",
+    "tags": [
+      {
+        "name": "@HC",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

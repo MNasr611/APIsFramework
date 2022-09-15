@@ -1,6 +1,4 @@
-
 Feature: Get Users And Add Posts
-
   @HC
   Scenario: Get Specific User and Add A Post To The Wall of the user
     Given  Create Multiple QueryParams For Get Request

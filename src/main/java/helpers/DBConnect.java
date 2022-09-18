@@ -14,4 +14,8 @@ public class DBConnect {
         }
         return connect ;
     }
+
+    public static void closeDB() throws SQLException, ClassNotFoundException {
+        connect().close();
+    }
 }

@@ -1,18 +1,18 @@
 package helpers;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.apache.commons.logging.Log;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 
 
 
 public class CleanObject {
-    public static String getCleanObject(Object object) throws JsonProcessingException {
+    static File file ;
+
+    public static String getCleanObject(Object object){
         ObjectMapper Obj = new ObjectMapper();
         String jsonStr = null;
 
@@ -32,4 +32,14 @@ public class CleanObject {
             ObjectMapper objectMapper = new ObjectMapper();
             return objectMapper.convertValue(object, HashMap.class);
         }
+
+
+    public static File getObjectAsJSONFile (Object object , String fileName) throws IOException {
+        ObjectMapper objectMapper = new ObjectMapper();
+        file = new File("src/test/java/TestData/" + fileName + ".json");
+        objectMapper.writeValue(file,object);
+        return file;
+    }
+
+
     }

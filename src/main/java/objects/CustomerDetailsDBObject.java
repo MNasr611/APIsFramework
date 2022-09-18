@@ -1,44 +1,38 @@
 package objects;
 
-import java.util.Date;
+import enums.Queries;
+import helpers.CleanObject;
+import models.request.CustomerDetialsRequestModel;
+import utils.RetrieveQueryRecords;
+
+import java.io.File;
+import java.io.IOException;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class CustomerDetailsDBObject {
-    // for each row in DB u have to create the same column name and type in the class
-    // ex : if column name is string xX then the java object will be string xX
-    private String CourseName;
-    private Date PurchaseDate;
-    private int Amount;
-    private String Location;
+    static CustomerDetialsRequestModel customerDetialsRequestModel;
+    static Statement statement ;
 
-    public String getCourseName() {
-        return CourseName;
+    public static CustomerDetialsRequestModel convertDBRecordsToJavaObject(ResultSet rS , String query) throws SQLException, ClassNotFoundException {
+        customerDetialsRequestModel = new CustomerDetialsRequestModel();
+        rS = RetrieveQueryRecords.retrieveRecords(statement, query);
+        rS.next();
+//        while (rS.next()){
+//            rS.getString(1);
+//        }
+        customerDetialsRequestModel.CourseName = rS.getString(1);
+        return customerDetialsRequestModel;
     }
 
-    public void setCourseName(String courseName) {
-        CourseName = courseName;
+
+    public static File convertObjectIntoJson(CustomerDetialsRequestModel customerDetialsRequestModel, String fileName) throws SQLException, ClassNotFoundException, IOException {
+        return CleanObject.getObjectAsJSONFile(customerDetialsRequestModel,fileName);
     }
 
-    public Date getPurchaseDate() {
-        return PurchaseDate;
-    }
 
-    public void setPurchaseDate(Date purchaseDate) {
-        PurchaseDate = purchaseDate;
-    }
 
-    public int getAmount() {
-        return Amount;
-    }
 
-    public void setAmount(int amount) {
-        Amount = amount;
-    }
 
-    public String getLocation() {
-        return Location;
-    }
-
-    public void setLocation(String location) {
-        Location = location;
-    }
 }
